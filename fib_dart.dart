@@ -8,6 +8,6 @@ int fib(int n){
 }
 
 void main(){
-  int n=int.parse(stdin.readLineSync(););
+  int n=int.parse(stdin.readLineSync();
   print("fib($n) = ${fib(n)}");
 }
