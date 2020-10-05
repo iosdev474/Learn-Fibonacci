@@ -1,0 +1,6 @@
+LDA     6969
+MOV     H, A
+LDA     6970
+MOV     D, A
+XCHG
+HLT
