@@ -1,33 +1,31 @@
-#include <iostream>
+//Fibonacci Series using Dynamic Programming 
+#include<iostream> 
 using namespace std;
-
-int main()
-{
-    int n, t1 = 0, t2 = 1, nextTerm = 0;
-
-    cout << "Enter the number of terms: ";
-    cin >> n;
-
-    cout << "Fibonacci Series: ";
-
-    for (int i = 1; i <= n; ++i)
-    {
-        // Prints the first two terms.
-        if(i == 1)
-        {
-            cout << " " << t1;
-            continue;
-        }
-        if(i == 2)
-        {
-            cout << t2 << " ";
-            continue;
-        }
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
-        
-        cout << nextTerm << " ";
-    }
-    return 0;
-}
+  
+void fib(int n) 
+{ 
+  /* Declare an array to store Fibonacci numbers. */
+  int f[n+1]; 
+  int i; 
+  
+  /* 0th and 1st number of the series are 0 and 1*/
+  f[0] = 0; 
+  f[1] = 1; 
+  
+  for (i = 2; i <= n; i++) 
+  { 
+      /* Add the previous 2 numbers in the series 
+         and store it */
+      f[i] = f[i-1] + f[i-2]; 
+  } 
+  for(i=0;i<n;i++)cout<<f[i]<<" ";  
+} 
+  
+int main () 
+{ 
+  int n;
+  //enter the number  
+  cin>>n;
+  fib(n)  
+  return 0; 
+} 
