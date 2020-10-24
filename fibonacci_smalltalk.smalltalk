@@ -1,0 +1,13 @@
+fibonacci: n
+    | numbers a b |
+    numbers := OrderedCollection new.
+    a := 1.
+    b := 1.
+    [ numbers size < n ] whileTrue: [
+	| temp |
+	numbers add: a.
+	temp := b.
+	b := a + b.
+	a := temp.
+    ].
+    ^ numbers.
